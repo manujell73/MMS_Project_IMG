@@ -1,4 +1,4 @@
-package com.mms.img.demo;
+package com.mms.img;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

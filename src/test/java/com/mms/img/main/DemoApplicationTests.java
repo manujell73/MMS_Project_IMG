@@ -1,4 +1,4 @@
-package com.mms.img.demo;
+package com.mms.img.main;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
