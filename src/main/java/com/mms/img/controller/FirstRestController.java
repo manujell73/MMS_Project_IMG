@@ -17,13 +17,14 @@ import java.io.IOException;
 @Controller
 public class FirstRestController {
 
-    @GetMapping("/")
-    public String index(Model model){
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(){
         return "index";
     }
 
+    @ResponseBody
     @RequestMapping(value = "/upload", method = RequestMethod.POST, produces = MediaType.IMAGE_PNG_VALUE)
-    public @ResponseBody byte[] upload(Model model, @RequestParam MultipartFile file) throws IOException {
+    public byte[] upload(@RequestParam MultipartFile file) throws IOException {
         BufferedImage image = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
 
         Graphics g = image.getGraphics();
