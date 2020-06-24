@@ -2,6 +2,7 @@ package com.mms.img.entries;
 
 import org.springframework.web.multipart.MultipartFile;
 
+// for future use
 public class ImageEntry extends Entry {
     private final MultipartFile image;
 
