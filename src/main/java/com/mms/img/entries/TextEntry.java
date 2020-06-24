@@ -1,31 +1,20 @@
 package com.mms.img.entries;
 
-public class TextEntry {
+public class TextEntry extends Entry {
     private final String text;
-    private final int x;
-    private final int y;
-    private final int angle;
+    private final float fontSize;
 
-    public TextEntry(String text, int x, int y, int angle) {
+    public TextEntry(String text, int x, int y, int angle, float fontSize) {
+        super(x, y, angle);
         this.text = text;
-        this.x = x;
-        this.y = y;
-        this.angle = angle;
+        this.fontSize = fontSize;
     }
 
     public String getText() {
         return text;
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getAngle() {
-        return angle;
+    public float getFontSize() {
+        return fontSize;
     }
 }
