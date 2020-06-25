@@ -5,7 +5,8 @@ public class TextEntry extends Entry {
     private final float fontSize;
 
     public TextEntry(String text, int x, int y, int angle, float fontSize) {
-        super(x, y, angle);
+        // y coordinate start on the bottom of the text, we want it to start at the top
+        super(x, y + (int) fontSize, angle);
         this.text = text;
         this.fontSize = fontSize;
     }
