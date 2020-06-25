@@ -91,6 +91,8 @@ public class FirstRestController {
                 textEntries[i] = textEntry;
             }
             return textEntries;
+        } catch (NumberFormatException e) {
+            throw new JSONParsingError("Integer values are not valid");
         } catch (ParseException e) {
             throw new JSONParsingError("textData is not a valid JSON value");
         }
